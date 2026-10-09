@@ -17,7 +17,7 @@ test.describe('Ontario.ca Search', () => {
     await page.goto('/search/search-results/?query=driver+licence');
     await expect(page.locator('.result-title a').first()).toContainText('driver');
   });
-
+ 
   test('search for driver licence returns results', async ({ page }) => {
   await page.goto('/search?query=health+card');
 await page.waitForSelector('.result-title a');
